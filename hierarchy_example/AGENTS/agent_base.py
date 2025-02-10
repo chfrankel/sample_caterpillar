@@ -12,14 +12,9 @@ LEARNED_RESULTS_FILE     = 'learned_results.txt'
 class Agent_base(ABC):
     #####
     # METHOD: __init__
+    # parameter notes - the cli requires a catalog - using a dummy value unless one is provided
     #####
-    def __init__(self, input_catalog = None, output_catalog = None):
-
-        # the current awarity cli seems to require a catalog - using a dummy value unless one is provided
-        if input_catalog is None:
-            input_catalog = DEFAULT_CATALOG_LOCATION
-        if output_catalog is None:
-            output_catalog = DEFAULT_CATALOG_LOCATION
+    def __init__(self, input_catalog = DEFAULT_CATALOG_LOCATION, output_catalog = DEFAULT_CATALOG_LOCATION):
 
         self.input_catalog  = input_catalog
         self.output_catalog = output_catalog
@@ -34,22 +29,20 @@ class Agent_base(ABC):
             "tests": []
         }
 
-
     ########################## private methods ##########################
 
     #####
     # METHOD: __add_query
     #####
-    def __add_query(self, query, model="hybrid", provider = "openai") -> None:
-        if "gemini" in model:
-            provider = "google.com"
+    def __add_query(self, query, model="hybrid", provider = "company_provider") -> None:
+        if "one_company_provider" in model:
+            provider = "company.com"
         query = {
-            "program": "awareness",
+            "program": "program_here",
             "provider": provider,
             "model" : model,
             "catalog": self.input_catalog,
             # "crawl-depth": 1,
-            # "uri": "https://awarity.ai",
             "query": query
         }
         self.query_struct["tests"].append(query)
@@ -63,13 +56,13 @@ class Agent_base(ABC):
 
         # Split the command into parts
         command = query_string.split("query: ", 1)[-1]
-        parts = shlex.split(command)
+        command_parts = shlex.split(command)
 
         # Initialize dictionary to store parsed parameters
         my_query = {}
 
         # Iterate through parts to convert options and values into a dictionary
-        iterator = iter(parts[1:])  # Skip the first command ('awareness')
+        iterator = iter(command_parts[1:])  # Skip the first command ('awareness')
         for part in iterator:
             if part.startswith('--'):  # Check for flags
                 key = part.lstrip('--')
@@ -109,7 +102,7 @@ class Agent_base(ABC):
 
         assert self.agent_input_file is not None, "No queries to execute"
 
-        command_list : list[str] = ['awarity-cli-runner']
+        command_list : list[str] = ['program_here']
         command_list.extend(['--i', self.agent_input_file])
         # print(f"Executing command: {command_list}")
         result : subprocess.CompletedProcess = subprocess.run(command_list, capture_output=True, text=True)
@@ -132,7 +125,7 @@ MODEL: {parsed_query['model']}
 {one_result['message']}
 ''')
             
-        command_list : list[str] = ['awareness', 'ingest', self.output_catalog, '-u', LEARNED_RESULTS_FILE]
+        command_list : list[str] = ['program_here', 'ingest', self.output_catalog, '-u', LEARNED_RESULTS_FILE]
         result : subprocess.CompletedProcess = subprocess.run(command_list, capture_output=True, text=True)
 
         print(f"Results saved to catalog: {command_list}")

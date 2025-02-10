@@ -66,8 +66,7 @@ class Iterative_Learner():
 #####
 # High-level functions
 #####
-# ALL_KNOWN_MODELS = ['gpt-4o-mini', 'hybrid', 'gpt-4o'] # this seems to return a dummy result, 'gpt-3.5', or not properly indented code
-ALL_KNOWN_MODELS = ['gpt-4o-mini', 'hybrid', 'gpt-4o']
+ALL_KNOWN_MODELS = ['xxxx', 'yyyyy', 'zzzzz']
 def learn_and_save():
     i = Iterative_Learner(Py_Dev_Agent, models=ALL_KNOWN_MODELS, input_catalog=None, output_catalog=LEARNED_CATALOG)
     print('first query')
