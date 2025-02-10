@@ -6,57 +6,33 @@ from python_agent import Python_Agent
 #####
 # CONSTANT: PROGRAMMING_TASK
 #####
-PROGRAMMING_TASK = f'''Write a Python program that calculates the sum of all prime numbers up to 10,000,000'''
-ACCURACY_VALIDATION = f'''the resultant sum of all prime numbers up to 10,000,000''' # is 37550402023'''
+PROGRAMMING_TASK = f'Write a Python program that calculates the sum of all prime numbers up to 10,000,000'
+ACCURACY_VALIDATION = f'validation here'
 
 #####
 # CONSTANT: INITIAL_QUERY
 #####
 INITIAL_QUERY = f'''
-Write a complete, fully functional, and properly formatted python program to accomplish the following PROGRAMGING TASK:
+Query here
 
 PROGRAMGING TASK:
 {PROGRAMMING_TASK}
 
-print out only the execution time of the script, and the accuracy validation : {ACCURACY_VALIDATION}
-format the time to 3 decimal places in the format 0.123 seconds
-format the accuracy validation as a single **number**, defined as {ACCURACY_VALIDATION}, for instance 1,234,567 - note commas separating the thousands places
-The final output should be in this format: '[Execution time: 0.123 seconds, accuracy validation]']
+validation : {ACCURACY_VALIDATION}
 '''
 
 #####
 # CONSTANT: ITERATIVE_QUERIES
 #####
-ITERATIVE_QUERIES = '''
-I asked this query:
-"{initial_query}"
-
-I want you to examine the program you wrote, and write a new program that is faster than the one you initially wrote
-Your program's exucution time: {execution_time}
-Your prorgam's output: {this_program}
-
-Here are is a list of programs that accomplished the same task, the format is execution time, followed by the program. 
-Use these programs to learn a better way to solve the problem.
-{other_programs}
+ITERATIVE_QUERIES = f'''
+iterative queryies here
 '''
 
 #####
 # CONSTANT: ITERATIVE_QUERIES
 #####
 FINAL_QUERY = f'''
-Given your last several attempts to write accomplish this programming task:
-
-PROGRAMMING_TASK: {PROGRAMMING_TASK}
-
-summarize what you learned about writing the fastest program to accomlish the task.
-Output adivce including a summary and list of tips, ordered from most important advice to least important for instance:
-
-SUMMARY: overview of what was learned
-
-TIPS:
-1) Most important advice
-2) second most important advice
-3) third most important advice
+final query here
 '''
 
 #####
@@ -129,33 +105,3 @@ class Py_Dev_Agent(Python_Agent):
 
 if __name__ == "__main__":
     print('welcome to __main__ for the py_dev_agent class')
-
-# debug query
-# awareness --output json --provider openai --model hybrid --catalog CATALOG query \"\nwrite a complete, properly formatted python program to generate histograms of two and three letter sequences, do not include white space, in pdf files named DATA/sfl_hamlet.pdf, DATA/sfl_hamlet.pdf and DATA/sfl_hamlet.pdf\ncalculate the top 1,000 most frequent sequences for each file.\nprint out only the execution time of the script, do not plot the results\nformat the time to 3 decimal places in the format: 'Execution time: 0.123 seconds'\n\"
-
-
-
-#####
-# CONSTANT: PROGRAMMING_TASK
-#####
-# PROGRAMMING_TASK = f'''
-# Examine the following file {DATA_LOCATION}/sfl_hamlet.pdf, and generate historgram of characters vs the number of words they speak.
-# charcaters are identified by words with all capital letters, with the exception of FTLN which should be ignored. 
-# They speak in the following format, where below there are two characters speaking : "THE GHOST" and "HAMLET"
-
-# THE GHOST
-# Some words
-# Some words
-# HAMLET
-# Some words
-# Some words
-# '''
-
-
-# DATA_LOCATION   = 'AGENT_DIRECTORIES/DATA'
-# PROGRAMMING_TASK = f'''
-# generate separate histograms of two and three letter sequences of characters, do not include white space, 
-# Generate the histograms for each of the following pdf files: 
-# {DATA_LOCATION}/sfl_hamlet.pdf, {DATA_LOCATION}/sfl_hamlet.pdf and {DATA_LOCATION}/sfl_hamlet.pdf
-# calculate the top 1,000 most frequent sequences.
-# '''

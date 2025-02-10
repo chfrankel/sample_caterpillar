@@ -7,60 +7,26 @@ from agent_base import Agent_base
 # CONSTANT: PROGRAMMING_TASK
 #####
 PROGRAMMING_TASK = f'''
-Consider the following python program. I want you to add comprehensive component-level testing to the program.
-Include a switch in the program's command line to turn on and off the testing. --debug True/False
-The testing should check every variable going into and out of every function, and every function's return value.
-Include a test for every possible error condition, and every possible edge case.
-'''
+xxx'''
 
 #####
 # CONSTANT: INITIAL_QUERY
 #####
 INITIAL_QUERY = f'''
-Write a complete, fully functional, and properly formatted python program to accomplish the following PROGRAMGING TASK:
-
-PROGRAMGING TASK:
-{PROGRAMMING_TASK}
-
-print out only the execution time of the script, and the accuracy validation : {ACCURACY_VALIDATION}
-format the time to 3 decimal places in the format 0.123 seconds
-format the accuracy validation as a single **number**, defined as {ACCURACY_VALIDATION}, for instance 1,234,567 - note commas separating the thousands places
-The final output should be in this format: '[Execution time: 0.123 seconds, accuracy validation]']
-'''
+yyyy'''
 
 #####
 # CONSTANT: ITERATIVE_QUERIES
 #####
 ITERATIVE_QUERIES = '''
-I asked this query:
-"{initial_query}"
-
-I want you to examine the program you wrote, and write a new program that is faster than the one you initially wrote
-Your program's exucution time: {execution_time}
-Your prorgam's output: {this_program}
-
-Here are is a list of programs that accomplished the same task, the format is execution time, followed by the program. 
-Use these programs to learn a better way to solve the problem.
-{other_programs}
+xxxx
 '''
 
 #####
 # CONSTANT: ITERATIVE_QUERIES
 #####
 FINAL_QUERY = f'''
-Given your last several attempts to write accomplish this programming task:
-
-PROGRAMMING_TASK: {PROGRAMMING_TASK}
-
-summarize what you learned about writing the fastest program to accomlish the task.
-Output adivce including a summary and list of tips, ordered from most important advice to least important for instance:
-
-SUMMARY: overview of what was learned
-
-TIPS:
-1) Most important advice
-2) second most important advice
-3) third most important advice
+yyyyy
 '''
 
 #####

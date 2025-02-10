@@ -1,12 +1,11 @@
 #!python3
 from AGENTS.agent_base import Agent_base
-from AGENTS.py_dev_agent import Py_Dev_Agent
 
 LEARNED_CATALOG = 'OUTPUT_DIRECTORIES/LEARNED_CATALOG'
 
 #####
 # CLASS: Iterative_Learner
-# this class takes an initial query and follow-up queries and saves the learned results
+# this class takes an initial query and follow-up queries and saves the learned results to a catalog
 #####
 class Iterative_Learner():
 
@@ -63,9 +62,12 @@ class Iterative_Learner():
         results = self.agent.execute_queries()
         self.agent.save_results_to_calalog(results)
 
+
+
 #####
-# High-level functions
+# High-level functions to exercise the class
 #####
+from AGENTS.py_dev_agent import Py_Dev_Agent
 ALL_KNOWN_MODELS = ['xxxx', 'yyyyy', 'zzzzz']
 def learn_and_save():
     i = Iterative_Learner(Py_Dev_Agent, models=ALL_KNOWN_MODELS, input_catalog=None, output_catalog=LEARNED_CATALOG)

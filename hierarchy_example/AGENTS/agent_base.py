@@ -62,7 +62,7 @@ class Agent_base(ABC):
         my_query = {}
 
         # Iterate through parts to convert options and values into a dictionary
-        iterator = iter(command_parts[1:])  # Skip the first command ('awareness')
+        iterator = iter(command_parts[1:])  # Skip the first command ('')
         for part in iterator:
             if part.startswith('--'):  # Check for flags
                 key = part.lstrip('--')
