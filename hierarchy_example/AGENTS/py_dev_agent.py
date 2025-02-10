@@ -23,13 +23,14 @@ validation : {ACCURACY_VALIDATION}
 
 #####
 # CONSTANT: ITERATIVE_QUERIES
+# not that this is not an f-string, so the curly braces are provided by the format method
 #####
 ITERATIVE_QUERIES = f'''
 iterative queryies here
 '''
 
 #####
-# CONSTANT: ITERATIVE_QUERIES
+# CONSTANT: FINAL_QUERY
 #####
 FINAL_QUERY = f'''
 final query here
