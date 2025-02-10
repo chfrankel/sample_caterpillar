@@ -15,8 +15,7 @@ ACCURACY_VALIDATION = f'validation here'
 INITIAL_QUERY = f'''
 Query here
 
-PROGRAMGING TASK:
-{PROGRAMMING_TASK}
+PROGRAMGING TASK: {PROGRAMMING_TASK}
 
 validation : {ACCURACY_VALIDATION}
 '''
@@ -25,8 +24,9 @@ validation : {ACCURACY_VALIDATION}
 # CONSTANT: ITERATIVE_QUERIES
 # not that this is not an f-string, so the curly braces are provided by the format method
 #####
-ITERATIVE_QUERIES = f'''
+ITERATIVE_QUERIES = '''
 iterative queryies here
+{initial_query}, {execution_time} etc.
 '''
 
 #####
