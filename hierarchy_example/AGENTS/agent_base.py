@@ -1,10 +1,10 @@
 #!python3
+# © 2025 Charles Frankel. All rights reserved.
+
 from abc import ABC, abstractmethod
 import json
 import shlex
 import subprocess
-
-# © 2025 Charles Frankel. All rights reserved.
 
 ########################## DIRECTORIES ##########################
 DEFAULT_CATALOG_LOCATION = 'OUTPUT_DIRECTORIES/CATALOG'
