@@ -1,6 +1,7 @@
 #!python3
-from agent_base import Agent_base
+# © 2025 Charles Frankel. All rights reserved.
 
+from agent_base import Agent_base
 ########################## STRING CONSTANTS ##########################
 
 # © 2025 Charles Frankel. All rights reserved.
