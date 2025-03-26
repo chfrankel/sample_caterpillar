@@ -1,4 +1,7 @@
 #!python3
+# © 2025 Charles Frankel. All rights reserved.
+
+
 from agent_base import Agent_base
 import json
 import subprocess
