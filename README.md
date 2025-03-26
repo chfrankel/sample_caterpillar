@@ -1,4 +1,3 @@
 # Sample code for Caterpillar Review
 
-copyright Charles Frankel
-2025
+© 2025 Charles Frankel. All rights reserved.
