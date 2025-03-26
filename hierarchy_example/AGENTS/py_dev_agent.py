@@ -1,12 +1,8 @@
 #!python3
-from python_agent import Python_Agent
-
-
 # © 2025 Charles Frankel. All rights reserved.
 
-########################## STRING CONSTANTS ##########################
-
-#####
+from python_agent import Python_Agent
+########################## STRING CONSTANTS ###############################
 # CONSTANT: PROGRAMMING_TASK
 #####
 PROGRAMMING_TASK = f'Write a Python program that calculates the sum of all prime numbers up to 10,000,000'
