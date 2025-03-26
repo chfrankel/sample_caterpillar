@@ -1,4 +1,6 @@
 #!python3
+# © 2025 Charles Frankel. All rights reserved.
+
 import argparse
 import functools
 import json
