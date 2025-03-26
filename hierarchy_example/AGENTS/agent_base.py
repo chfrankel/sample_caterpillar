@@ -4,6 +4,8 @@ import json
 import shlex
 import subprocess
 
+# © 2025 Charles Frankel. All rights reserved.
+
 ########################## DIRECTORIES ##########################
 DEFAULT_CATALOG_LOCATION = 'OUTPUT_DIRECTORIES/CATALOG'
 INPUT_QUERIES_DIR        = 'OUTPUT_DIRECTORIES/INPUT_QUERIES'
