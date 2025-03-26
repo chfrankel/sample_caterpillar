@@ -3,6 +3,8 @@ from agent_base import Agent_base
 
 ########################## STRING CONSTANTS ##########################
 
+# © 2025 Charles Frankel. All rights reserved.
+
 #####
 # CONSTANT: PROGRAMMING_TASK
 #####
