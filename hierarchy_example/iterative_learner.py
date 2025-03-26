@@ -1,9 +1,9 @@
 #!python3
+# © 2025 Charles Frankel. All rights reserved.
+
 from AGENTS.agent_base import Agent_base
 
 LEARNED_CATALOG = 'OUTPUT_DIRECTORIES/LEARNED_CATALOG'
-
-# © 2025 Charles Frankel. All rights reserved.
 
 #####
 # CLASS: Iterative_Learner
