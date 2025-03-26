@@ -8,6 +8,9 @@ from selenium.webdriver.chrome.options import Options
 import time
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
+
+# © 2025 Charles Frankel. All rights reserved.
+
 ################################################################################################################
 # WebDriver class
 # 
