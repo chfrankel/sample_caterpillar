@@ -3,6 +3,8 @@ from AGENTS.agent_base import Agent_base
 
 LEARNED_CATALOG = 'OUTPUT_DIRECTORIES/LEARNED_CATALOG'
 
+# © 2025 Charles Frankel. All rights reserved.
+
 #####
 # CLASS: Iterative_Learner
 # this class takes an initial query and follow-up queries and saves the learned results to a catalog
