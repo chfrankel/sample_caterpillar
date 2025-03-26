@@ -1,6 +1,9 @@
 #!python3
 from python_agent import Python_Agent
 
+
+# © 2025 Charles Frankel. All rights reserved.
+
 ########################## STRING CONSTANTS ##########################
 
 #####
